@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/2882665ba0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Cloud Gaming - Play Games 🎮😊</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            top: 0;
+            z-index: 1000;
+            position: sticky;
+            backdrop-filter: blur(100px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .heading {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            font-size: xx-large;
+            font-style: italic;
+            color: #3ac4f2;
+            font-weight: bolder;
+            text-shadow: 1px 1px 5px #e22b90;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .navbar li {
+            padding: 0 20px;
+            font-size: 1.4em;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            color: #3ac4f2;
+            cursor: pointer;
+        }
+
+        .background {
+            z-index: 0;
+            top: 0;
+            width: 100%;
+            height: 1000px;
+            display: flex;
+        }
+
+
+        footer {
+            display: flex;
+            background: #0f0222;
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+            flex-direction: column;
+        }
+
+        .upper {
+            display: flex;
+            height: fit-content;
+        }
+
+        .baseline {
+            justify-content: center;
+            font-size: small;
+            background: #080014;
+            display: flex;
+            padding: 10px;
+            margin-top: 10px;
+            align-items: center;
+        }
+
+        .about {
+            width: 30%;
+            text-align: left;
+            line-height: 1.3;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            margin-left: 5vw;
+        }
+
+        .title {
+            font-size: larger;
+            margin-bottom: 1vh;
+        }
+
+        .logo_align {
+            display: flex;
+            align-items: baseline;
+            width: full;
+            justify-content: center;
+
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        footer li {
+            text-decoration: none;
+            line-height: 2;
+            list-style: none;
+            font-size: large;
+        }
+
+        footer li:hover {
+            color: #3ac4f2;
+            cursor: pointer;
+        }
+
+        .icons {
+            width: full;
+            text-align: left;
+            justify-content: center;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+
+            .title {
+                margin-bottom: 0;
+            }
+        }
+
+        .icons ul {
+            display: flex;
+        }
+
+        .icons ul li {
+            display: flex;
+            margin-left: 1vw;
+            font-size: x-large;
+        }
+
+        .youtube i {
+            border-radius: 8px;
+            justify-content: center;
+            color: #A0AEC0;
+            margin-left: 3px;
+            cursor: pointer;
+        }
+
+        .youtube i:hover {
+            color: #FF0000;
+        }
+
+        .linkedin i {
+            color: #A0AEC0;
+            cursor: pointer;
+        }
+
+        .linkedin i:hover {
+            color: #32CD32;
+        }
+
+        .github i {
+            color: #A0AEC0;
+            border-radius: 50%;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .github i:hover {
+            color: #000000;
+        }
+
+        .facebook i {
+            color: #A0AEC0;
+            cursor: pointer;
+        }
+
+        .facebook i:hover {
+            color: #0000FF;
+        }
+
+        .google {
+            cursor: pointer;
+            margin-bottom: 0.5vh;
+        }
+
+        .google:hover {
+            filter: brightness(80%);
+        }
+
+        .google {
+            width: 100px;
+        }
+
+        .google img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+
+        .pic {
+            transform: rotateZ(-10deg);
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .features {
+            margin-top: 600px;
+            padding-top: 400px;
+            padding: 200px 0;
+            text-align: center;
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            height: fit-content;
+            flex-direction: column;
+            padding-top: 50px;
+            background: #0d021e;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .contact {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-style: italic;
+            color: #3ac4f2;
+            text-shadow: 1px 1px 5px #e22b90;
+            font-size: 60px;
+            height: 500px;
+        }
+
+        .Head {
+            display: flex;
+            font-size: 50px;
+            color: #3ac4f2;
+            font-style: italic;
+            font-weight: bolder;
+            text-shadow: 1px 1px 5px #e22b90;
+        }
+
+        .joinchannel {
+            overflow: hidden;
+            background: #0f0222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 100px;
+
+            padding-top: 100px;
+            padding: 0 50px;
+            height: 500px;
+
+            .para {
+                display: flex;
+                width: 100%;
+                text-align: center;
+                padding: 30px 0px;
+                font-size: 15px;
+                color: white;
+                font-style: italic;
+                font-weight: bolder;
+                text-shadow: 1px 1px 5px #e22b90;
+            }
+
+            .input {
+                display: flex;
+                margin-top: 20px;
+
+                .inputtype {
+                    padding: 10px;
+                    border: none;
+                    outline: none;
+                    font-size: 15px;
+                }
+
+                .button {
+                    padding: 10px;
+                    border: none;
+                    outline: none;
+                    font-size: 15px;
+                    cursor: pointer;
+                    background-color: #3ac4f2;
+                    color: white;
+                    text-align: center;
+                }
+            }
+
+            .bg {
+                padding: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-image: url(bg.jpg);
+                background-position: top;
+            }
+        }
+
+        .reviews {
+            background: #0d021e;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .main {
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        .rev {
+            height: 300px;
+        }
+
+        .display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            padding: 100px 0;
+            ;
+        }
+
+        .comment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: white;
+            padding: 100px 50px;
+            font-style: italic;
+            font-weight: bolder;
+            text-shadow: 1px 1px 5px #e22b90;
+        }
+
+        #myVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* or 'contain' based on your preference */
+            z-index: -1;
+            filter: brightness(40%);
+        }
+
+        .content {
+            z-index: 1;
+            width: 100%;
+            display: flex;
+            align-items: baseline;
+            max-height: 100%;
+            top: 50%;
+            justify-content: center;
+            color: white;
+            position: absolute;
+
+            margin: auto;
+            text-align: center;
+
+            .submain {
+                margin-left: 10px;
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .head {
+                font-size: 3.5em;
+                font-weight: bold;
+                font-style: italic;
+                margin-bottom: 40px;
+            }
+
+            .head_text {
+                color: #3ac4f2;
+                text-shadow: 1px 1px 5px #e22b90;
+            }
+
+            .para {
+                text-align: center;
+                font-size: 1.5em;
+                padding: 0 30px;
+                line-height: 1.5;
+                margin-bottom: 50px;
+            }
+
+
+            .pic {
+                transform: rotateZ(-10deg);
+                padding: 0 10px;
+                text-align: center;
+
+            }
+
+            .button {
+                width: fit-content;
+                padding: 15px 30px;
+                font-size: x-large;
+                border-radius: 10px;
+                color: white;
+                background: linear-gradient(to bottom right, #1b0932, #3ac4f2, #7a55c2);
+                border: none;
+                display: flex;
+                justify-content: center;
+
+            }
+
+            .button:hover {
+                background: linear-gradient(to bottom right, #7a55c2, #3ac4f2, #1b0932);
+                cursor: pointer;
+
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+            }
+
+            .submain2 {
+                display: flex;
+                justify-content: right;
+                filter: brightness(95%);
+                flex-direction: column;
+            }
+
+            .image_text {
+                justify-content: center;
+                font-size: xx-large;
+                font-weight: bolder;
+                font-style: italic;
+                font-family: 'Raleway', sans-serif;
+                display: flex;
+                color: #22d6ff;
+                text-shadow: 1px 1px 5px #e22b90;
+            }
+        }
+
+        .games {
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            background: #1d0441;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            font-style: italic;
+            font-weight: bolder;
+            margin-top: 1000px;
+        }
+
+        .gamesgrid {
+            position: relative;
+            width: 90%;
+            border-radius: 50px;
+            background-color: #160434;
+            padding: 50px 0px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin: 100px 0px;
+        }
+
+        .h {
+            display: flex;
+            padding-bottom: 70px;
+        }
+
+        .img {
+            border-radius: 15px;
+            height: 100%;
+            width: 100%;
+        }
+        .game:hover{
+            box-shadow: 8px 8px 20px 2px #e22b90 ;
+            cursor: pointer;
+        }
+        .game {
+            margin: 15px;
+            background: #260656;
+            flex-direction: column;
+            display: flex;
+            height: 250px;
+            width: 230px;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+
+            .image {
+                padding: 0px 10px;
+                display: flex;
+                width: 90%;
+                height: 150px;
+            }
+
+            .data {
+                width: 100%;
+                color: white;
+                height: 50px;
+                border-radius: 0px 0px 15px 15px;
+                display: flex;
+                align-items: center;
+                text-align: left;
+                justify-content: space-between;
+                ;
+                margin-top: 20px;
+            }
+
+            .text {
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+
+                .one {
+                    display: flex;
+                }
+
+                .sub {
+                    color: gray;
+                    font-size: 12px;
+                    padding-top: 3px;
+                    display: flex;
+                }
+            }
+
+            .icons {
+                font-size: 14px;
+                display: flex;
+
+                .icon1 {
+                    display: flex;
+                    padding-bottom: 6px;
+                }
+
+                .icon2 {
+                    display: flex;
+                }
+            }
+        }
+.buttonss{
+    margin-top: 100px;
+    align-items: baseline;
+    justify-content: end;
+      display: flex;
+      color: white;
+      border: none;
+      font-size: medium;
+      padding: 10px;
+      border-radius: 10px;
+      background:#e22b90 ;
+      cursor: pointer;
+    }
+    .buttonss:hover{
+    background:#22d6ff ;
+
+}
+        .grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    @media  screen and (min-width: 1240px) and (max-width: 1600px) {
+            .ic{
+                display: none;
+            }
+            .empty{
+                display: none;
+            }
+            .heading{
+                width: 25%;
+            }
+            .sidebar {
+                display: none;
+            }
+            
+        }
+        @media screen and (max-width: 1240px) {
+            
+            .navbar {
+                display: none;
+            }
+
+            .background {
+                height: 500px;
+            }
+
+            .grid {
+                flex-direction: column;
+            }
+
+            .heading {
+                font-size: larger;
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            footer {
+                height: fit-content;
+                overflow: hidden;
+
+                .upper {
+                    width: 90%;
+                    flex-direction: column;
+
+                    .about {
+                        width: 100%;
+                        margin-bottom: 30px;
+                        height: 100%;
+
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .ic{
+                display:flex;
+            }
+            .empty{
+                display:flex;
+            }
+            .heading{
+                width: 25%;
+            }
+            .sidebar {
+                display:flex;
+            }
+            .submain {
+                width: 100%;
+                text-align: center;
+            }
+
+            .para {
+                padding: 0;
+                width: 80%;
+                text-align: center;
+            }
+
+            .rev {
+                height: 150px;
+            }
+
+            .bg {
+                padding: none;
+            }
+
+            .p {
+                font-size: medium;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+
+
+            .grid {
+                flex-direction: column;
+            }
+
+            .heading {
+                font-size: larger;
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            footer {
+                height: fit-content;
+                overflow: hidden;
+
+                .upper {
+                    width: 90%;
+                    flex-direction: column;
+
+                    .about {
+                        width: 100%;
+                        margin-bottom: 30px;
+                        height: 100%;
+                    }
+
+                    .n {
+                        display: none;
+                    }
+                }
+
+                .icons {
+                    .title {
+                        width: 90%;
+                        text-align: left;
+                    }
+
+                }
+            }
+
+            .features {
+                margin-top: 200px;
+            }
+
+            .contact {
+                height: 250px;
+                font-size: 40px;
+            }
+        }
+
+        @media screen and (max-width: 1240px) {
+            .content {
+                top: 30%;
+            }
+        }
+
+        @media screen and (min-width: 1600px) {
+            .ic{
+                display: none;
+            }
+            .empty{
+                display: none;
+            }
+            .heading{
+                width: 25%;
+            }
+            .sidebar {
+                display: none;
+            }
+            .main {
+                flex-direction: row;
+            }
+
+            .comment {
+                width: 40%;
+            }
+
+            .container {
+                font-size: x-large;
+                text-align: left;
+            }
+
+            .background {
+                height: 750px;
+            }
+
+            .features {
+
+                .feature1,
+                .feature2,
+                .feature3 {
+                    font-size: 1.7em;
+                }
+            }
+
+            footer {
+                .n ul li {
+                    font-size: 1.1em;
+                }
+
+                font-size: 1.5em;
+            }
+
+            .baseline {
+                font-size: large;
+            }
+
+            header {
+                height: 12vh;
+                font-size: x-large;
+            }
+
+            .heading {
+                font-size: xxx-large;
+            }
+        }
+        @media  screen and (min-width: 1240px) and (max-width: 1600px) {
+            .ic{
+                display: none;
+            }
+            .empty{
+                display: none;
+            }
+            .heading{
+                width: 25%;
+            }
+            .sidebar {
+                display: none;
+            }
+            
+        }
+        .side {
+    transform:translateX(100%);
+    backdrop-filter: blur(100px);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: absolute;
+    flex-direction: row;
+    display: none;
+}
+
+.sidebar { 
+    width: 60%;
+    right: 0;
+    display: flex;
+}
+
+.sideul {
+    background-color:#0f0222;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+}
+
+.sideli {
+    padding: 30px 0;
+    width: 100%;
+    font-size: 1.5em;
+    border: 1px solid #fff;
+    list-style: none;
+    text-align: center;
+}
+
+.cross {
+    color: #22d6ff;
+            text-shadow: 1px 1px 5px #e22b90;
+    padding: 30px 0px;
+    width: 100%;
+    font-size: 2.5em;
+    border: 1px solid #fff;
+    background: transparent;
+    list-style: none;
+    display:flex;
+    margin-right: 10px;
+    justify-content: end;
+}
+
+.a {
+    color: #22d6ff;
+            text-shadow: 1px 1px 5px #e22b90;
+    text-decoration: none;
+}
+.ic{
+    color: #22d6ff;
+            text-shadow: 1px 1px 5px #e22b90;
+    font-size: xx-large;
+    width: 75%;
+    text-align: end;
+    justify-content: end;
+}
+.empty {
+    width: 40%;
+    overflow: hidden;
+    height: 100%; 
+    background: rgba(255, 253, 253, 0.5); 
+    filter: blur(20px);
+    filter: brightness(40%);
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="heading">
+            <div class="pic"><img height="40px" src="game.png" alt=""></div> Cloud Gaming
+        </div>
+        <div class="ic"><i id="bar" class="fa-solid fa-bars icon"></i></div>
+        <div id="slidebar" class="side">
+            <div id="empty" class="empty"></div>
+            <nav class="sidebar">
+                <ul class="sideul">
+                    <li class="cross"><i
+                        id="cross" class="fa-solid fa-xmark cursor-pointer" style="color: #ffffff;"></i></li>
+                    <li  class="sideli"><a class="a" href="index.html"> Home</a></li>
+                <li class="sideli"><a class="a"  href="game.html">Games</a></li>
+                <li class="sideli"><a class="a"  href="contact.html"> Contact Us</a></li>
+                <li class="sideli"><a class="a"  href="aboutus.html"> About Us</a></li>
+                <li class="sideli"><a class="a" href="login.html"> Signup/Login</a></li>
+            </ul>
+        </nav>
+        </div>
+        <nav class="navbar">
+
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="game.html">Games</a></li>
+                <li><a href="contact.html"> Contact Us</a></li>
+                <li><a href="aboutus.html"> About Us</a></li>
+                <li><a href="login.html"> Signup/Login</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="background">
+    </div>
+
+    <div class="content">
+        <div class="submain">
+            <div class="head">
+                Explore <span class="head_text">Cloud Gaming</span>
+            </div>
+            <div class="para">
+                <p>Immerse yourself in dynamic landscapes, engage in strategic battles, and become part of a thriving
+                    community for an unparalleled gaming adventure.</p>
+            </div>
+            <div class="buttons">
+                <button class="button">
+                    Lets Play
+                </button>
+            </div>
+        </div>
+    </div>
+    <video autoplay muted loop id="myVideo">
+        <source src="a.mp4" type="video/mp4">
+        not supported Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam quidem animi eius
+        aliquam deserunt repellat unde neque ut iste et sed voluptatibus quaerat, consequatur aspernatur necessitatibus
+        saepe laudantium ratione!
+    </video>
+
+
+  
+    <div class="games">
+
+        <div class="gamesgrid">
+            <div class="Head h">Games</div>
+            <div class="grid">
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="1.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one"> Fortnite</div>
+                                <div class="sub">Shooting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.8
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>2.3M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/stickman-dragon-fight">
+                        <div class="image"><img class="img" src="2.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one"> Fortnite</div>
+                                <div class="sub">Shooting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.8
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>2.3M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="3.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one">StickMan</div>
+                                <div class="sub">Fighting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.4
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>1.8M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="4.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one">Speed Racer</div>
+                                <div class="sub">Racing</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.4
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>1.8M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="5.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one">StickMan</div>
+                                <div class="sub">Fighting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.4
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>1.8M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="6.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one">StickMan</div>
+                                <div class="sub">Fighting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.4
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>1.8M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="7.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one">StickMan</div>
+                                <div class="sub">Fighting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.4
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>1.8M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="8.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one">StickMan</div>
+                                <div class="sub">Fighting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.4
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>1.8M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="6.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one">StickMan</div>
+                                <div class="sub">Fighting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.4
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>1.8M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="7.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one">StickMan</div>
+                                <div class="sub">Fighting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.4
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>1.8M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="8.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one">StickMan</div>
+                                <div class="sub">Fighting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.4
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>1.8M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="https://poki.com/en/g/battle-forces">
+                        <div class="image"><img class="img" src="8.jpeg" alt=""></div>
+                        <div class="data">
+                            <div class="text">
+                                <div class="one">StickMan</div>
+                                <div class="sub">Fighting</div>
+                            </div>
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class="fa-solid fa-star" style="color: #fff700;"></i>4.4
+                                </div>
+                                <div class="icon2">
+                                    <i class="fa-solid fa-download" style="color: #9e005c;"></i>1.8M
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="buttonss">Explore More</button>
+        </div>
+
+    </div>
+    <div class="reviews">
+        <div class="Head display">Gamer Reviews</div>
+        <div class="main">
+            <div class="image"><img class="rev"
+                    src="https://www.hardcoredroid.com/wp-content/upLoads/2021/08/how-to-write-game-reviews.png" alt="">
+            </div>
+            <div class="comment">Diving into cloud gaming has liberated my gaming experience. Across various devices,
+                from PC to smartphone, the seamless transition is a game-changer. The eradication of constant hardware
+                concerns and the newfound accessibility have redefined how I approach gaming. Despite occasional
+                hiccups, the sheer convenience of cloud gaming hints at a limitless future for the gaming industry</div>
+        </div>
+    </div>
+
+    <div class="joinchannel">
+        <div class="bg">
+
+            <div class="Head">Join Us</div>
+            <div class="para">Embark on a journey of a lifetime in our immersive fantasy game. Dive into a realm filled
+                with magic</div>
+            <div class="input">
+                <input class="inputtype" type="text" placeholder="Your email here...">
+                <div class="button text">Join</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="upper">
+            <div class="about">
+                <div class="header">
+                    <div class="title">
+                        Cloud Gaming
+                    </div>
+                    <div class="pic logo_align"><img height="20px" src="game.png" alt=""></div>
+                </div>
+                <p>Cloud Gaming is an online gaming platform that gives you access to thousands of online games, ranging
+                    from single to complex, to Test, Buy, Play and have fun with friends and family</p>
+            </div>
+            <div class="about n nav">
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>Games</li>
+                        <li>Terms & Conditions</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="icons nav">
+                <div class="title">Social Media</div>
+                <div class="icons">
+                    <ul>
+                        <li>
+                            <div class="youtube">
+                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="linkedin">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="github">
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="facebook">
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="images">
+                    <div class="google"><img src="google.png" alt=""></div>
+                    <div class="google"><img src="apple.png" alt=""></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="baseline">Copyright © 2023 Cloud Gaming - All Rights Reserved</div>
+    </footer>
+    <script>
+        var button = document.getElementById('bar');
+        var sidebar = document.getElementById('slidebar');
+        var crosssymbol = document.getElementById('cross');
+        var empty = document.getElementById('empty');
+    
+        button.addEventListener('click', function () {
+            sidebar.style.display = 'flex';
+            // Add transition properties
+            sidebar.style.transition = 'transform 0.4s ease-in-out';
+            sidebar.style.transform = 'translateX(0%)';
+
+        });
+    
+        crosssymbol.addEventListener('click', function () {
+            // Add transition properties
+            sidebar.style.transition = 'transform 0.4s ease-in-out';
+            sidebar.style.transform = 'translateX(100%)';
+    
+            setTimeout(function () {
+                sidebar.style.transition = 'none';
+                sidebar.style.display = 'none';
+            }, 400);
+        });
+    
+        empty.addEventListener('click', function () {
+            sidebar.style.transition = 'transform 0.4s ease-in-out';
+            sidebar.style.transform = 'translateX(100%)';
+    
+            setTimeout(function () {
+                sidebar.style.transition = 'none';
+                sidebar.style.display = 'none';
+            }, 400);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            height: 100%;
+            z-index: 50;
+        }
+    
+        #emptyspace {
+            width: 40%;
+            position: absolute;
+            justify-content: start;
+            height: 100%;
+        }
+    
+        .nav {
+            width: 60%;
+            justify-content: center;
+            background-color: #328b8e;
+        }
+    
+        .nav ul {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            height: 100vh;
+            width: 100%;
+        }
+    
+        .nav li {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 8vh;
+            color: white;
+            width: 100%;
+            font-size: 2xl;
+            padding: 2vh;
+        }
+    
+        .nav li i {
+            color: #ffffff;
+        }
+    
+        .nav li:hover {
+            color: #b4d0d2;
+            border-color: #b4d0d2;
+        }
+    
+        .nav li:nth-child(2),
+        .nav li:nth-child(3),
+        .nav li:nth-child(4) {
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid #b4d0d2;
+            height: 10vh;
+        }
+    
+        .nav li:nth-child(2):hover,
+        .nav li:nth-child(3):hover,
+        .nav li:nth-child(4):hover {
+            color: #b4d0d2;
+            border-color: #b4d0d2;
+        }
+    
+        .nav li:nth-child(4) i {
+            padding: 4px;
+        }
+    
+        .nav li:nth-child(5) {
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid #b4d0d2;
+            height: 10vh;
+        }
+    
+        .nav li:nth-child(5):hover {
+            color: #b4d0d2;
+            border-color: #b4d0d2;
+        }
+    
+        .nav li:nth-child(5) i {
+            padding: 4px;
+        }
+    
+        .nav li:nth-child(6) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid #b4d0d2;
+            height: 10vh;
+        }
+    
+        .nav li:nth-child(6):hover {
+            color: #b4d0d2;
+            border-color: #b4d0d2;
+        }
+    
+        .nav li:nth-child(6) i {
+            padding: 4px;
+        }
+    
+        .nav li:nth-child(7) {
+            display: flex;
+            justify-content: center;
+            height: 10vh;
+            width: 100%;
+        }
+    
+        .nav li:nth-child(7) a {
+            display: block;
+            width: 100%;
+            padding: 6px;
+            color: white;
+            font-weight: bold;
+            font-size: base;
+            background-color: #ff0000;
+            border-radius: 8px;
+            transition: background-color 0.3s ease-in-out;
+        }
+    
+        .nav li:nth-child(7) a:hover {
+            background-color: #ff1a1a;
+        }
+    
+        .list {
+            display: flex;
+            margin-top: 3vh;
+            font-family: sans-serif;
+            font-weight: bold;
+            width: 100%;
+            justify-content: center;
+        }
+    
+        .list ul {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            font-size: xl;
+            align-items: center;
+            justify-content: center;
+            font-size: 3xl;
+        }
+    
+        .list li {
+            display: flex;
+        }
+    
+        .list .youtube {
+            padding: 1vw;
+            padding-left: 2vw;
+            background-color: #2c3e50;
+            margin-right: 1px;
+            border-radius: 4px;
+        }
+    
+        .list .youtube i {
+            justify-content: center;
+            color: #808080;
+            hover: #ff0000;
+            cursor: pointer;
+        }
+    
+        .list .linkedin {
+            padding: 1vw;
+            padding-left: 2vw;
+            background-color: #2c3e50;
+            margin-right: 1px;
+            border-radius: 4px;
+        }
+    
+        .list .linkedin i {
+            color: #808080;
+            hover: #00ff00;
+            cursor: pointer;
+        }
+    
+        .list .github {
+            padding: 1vw;
+            padding-left: 2vw;
+            background-color: #2c3e50;
+            margin-right: 1px;
+            border-radius: 4px;
+        }
+    
+        .list .github i {
+            color: #808080;
+            border-radius: 50%;
+            hover: #000000;
+            width: 100%;
+            cursor: pointer;
+        }
+    
+        .list .facebook {
+            padding: 1vw;
+            padding-left: 2vw;
+            background-color: #2c3e50;
+            margin-right: 1px;
+            border-radius: 4px;
+        }
+    
+        .list .facebook i {
+            color: #808080;
+            hover: #0000ff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+<div id="slidebar" class="sidebar fixed hidden top-0 right-0 w-full bg-opacity-100 backdrop-blur-sm  h-full z-50 md:hidden">
+    <div id="emptyspace" class="w-2/5  absolute justify-start  h-full"></div>
+    <div class="sidebar flex justify-end w-full">
+        <nav class="flex w-3/5 nav justify-center bg-[#328b8e]">
+            <ul class="flex flex-col text-center h-screen w-full">
+                <li class="flex justify-end items-center h-[8vh] text-white  w-full text-2xl px-[2vh] "><i
+                        id="cross" class="fa-solid fa-xmark cursor-pointer" style="color: #ffffff;"></i></li>
+                <li
+                    class="flex ahh justify-center items-center h-[10vh] text-white border-2 border-slate-300 w-full cursor-pointer font-semibold  hover:text-[#b4d0d2] hover:border-[#b4d0d2] "><i class="fa fa-home px-2" aria-hidden="true"></i>
+                    Home</li>
+                <li
+                    class="flex justify-center items-center h-[10vh] font-semibold ahh  text-white border-slate-300 border-2 w-full hover:text-[#b4d0d2]  cursor-pointer  hover:border-[#b4d0d2] "> <i class="fa fa-tasks px-2" aria-hidden="true"></i>
+                    Skills</li>
+                <li
+                    class="flex justify-center items-center font-semibold ahh  h-[10vh] text-white border-slate-300 border-2 w-full hover:text-[#b4d0d2]  cursor-pointer  hover:border-[#b4d0d2] "> <i class="fa fa-envelope px-2" aria-hidden="true"></i>
+                    Contact me</li>
+                <li onclick="toggleTheme()"
+                    class="flex justify-center items-center font-semibold ahh  h-[10vh] text-white border-slate-300 border-2 w-full hover:text-[#b4d0d2]  cursor-pointer  hover:border-[#b4d0d2] "> <i class="fa fa-paint-brush px-4" aria-hidden="true"></i>
+                    Change Theme</li>
+                <li class="flex aaa justify-center items-center h-[10vh] w-full">
+                    <a href="#" class="block w-full px-6 py-3 text-white font-semibold text-base bg-red-600 rounded-lg hover:bg-red-700 transition duration-300 ease-in-out">
+                        Download my CV
+                    </a>
+                </li>
+
+                <li class="flex w-full justify-center">
+                    <div class="list flex my-[3vh] font-sans  font-semibold w-full justify-center">
+                        <ul class="flex w-full icons flex-row  text-xl items-center justify-center md:text-3xl">
+                            <li class="flex ">
+                                <div class="youtube p-[1vw] px-[2vw] bg-slate-900 mx-1 rounded-sm">
+                                    <i
+                                        class="fa fa-youtube-play rounded-2xl  justify-center text-gray-500   hover:text-red-600 cursor-pointer "></i>
+                                </div>
+                            </li>
+                            <li class="flex ">
+                                <div class="linkedin p-[1vw] px-[2vw] bg-slate-900 mx-1 rounded-sm">
+                                    <i class="fa fa-linkedin-square text-gray-500 hover:text-lime-800 cursor-pointer "></i>
+                                </div>
+                            </li>
+                            <li class="flex p-[1vw] px-[2vw] bg-slate-900 mx-1 rounded-sm">
+                                <div class="github ">
+                                    <i class="fa fa-github  text-gray-500  rounded-full hover:text-black w-full cursor-pointer"></i>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="facebook  p-[1vw] px-[2vw] bg-slate-900 mx-1 rounded-sm"><i
+                                        class="fa fa-facebook-square  text-gray-500  hover:text-blue-800 cursor-pointer "
+                                        aria-hidden="true"></i></div>
+                        </div>
+
+                    </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>
